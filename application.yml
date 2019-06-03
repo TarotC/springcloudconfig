@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+
+---
+
+# 开发环境
+spring:
+  application:
+    name: springcloud-config-dev
+  profiles: dev
+
+---
+
+# 测试环境
+spring:
+  application:
+    name: springcloud-config-test
+  profiles: test

@@ -2,7 +2,7 @@
 spring:
   profiles: dev
   application:
-    name: springcloud-eureka-config-dev
+    name: springcloud-config-dev
 
 server:
   port: 8000
@@ -22,7 +22,7 @@ eureka:
 spring:
   profiles: test
   application:
-    name: springcloud-eureka-config-test
+    name: springcloud-config-test
 
 server:
   port: 8000

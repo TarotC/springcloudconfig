@@ -2,7 +2,7 @@
 spring:
   profiles: dev
   application:
-    name: springcloud-config-dev
+    name: springcloud-provider-config-dev
   jpa:
     generate-ddl: true
     show-sql: true
@@ -31,7 +31,7 @@ eureka:
 spring:
   profiles: dev
   application:
-    name: springcloud-config-test
+    name: springcloud-provider-config-test
   jpa:
     generate-ddl: true
     show-sql: true

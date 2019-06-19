@@ -47,7 +47,7 @@ info:
 
 # 配置test环境
 spring:
-  profiles: dev
+  profiles: test
   application:
     name: springcloud-provider-config-test
   jpa:

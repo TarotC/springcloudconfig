@@ -3,6 +3,8 @@ spring:
   profiles: dev
   application:
     name: springcloud-consumer-config-dev
+  main:
+    allow-bean-definition-overriding: true # 防止出现多个bean的名字相同而报错
 
 server:
   port: 8080
@@ -16,6 +18,18 @@ feign:
   hystrix:
     enabled: true
 
+ribbon:
+  ReadTimeout: 1000
+  ConnectTimeout: 1000
+
+# 设置服务熔断时间，默认 1000毫秒
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
 ---
 
 # 配置test环境
@@ -23,6 +37,8 @@ spring:
   profiles: test
   application:
     name: springcloud-consumer-config-test
+  main:
+    allow-bean-definition-overriding: true # 防止出现多个bean的名字相同而报错
 
 server:
   port: 8080
@@ -35,3 +51,16 @@ eureka:
 feign:
   hystrix:
     enabled: true
+
+ribbon:
+  ReadTimeout: 1000
+  ConnectTimeout: 1000
+
+# 设置服务熔断时间，默认 1000毫秒
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000

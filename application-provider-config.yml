@@ -25,6 +25,24 @@ eureka:
     service-url:
       defaultZone: http://localhost:8000/eureka
 
+logging:
+  # 设置日志输出格式
+  pattern:
+    console: level-%level %msg%n
+  level:
+    root: info # Spring boot 启动时的日志级别
+    org.hibernate: info # Hibernate 运行日志级别
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+    com.jinlei: debug
+
+info:
+  company.name: my_company_name
+  company.addr: jiaxing
+  company.tel: 12345678
+  app.name: my_app_name
+  app.desc: mic_server_cloud
+  author: jinlei
 ---
 
 # 配置test环境
@@ -53,3 +71,22 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka
+
+logging:
+  # 设置日志输出格式
+  pattern:
+    console: level-%level %msg%n
+  level:
+    root: info # Spring boot 启动时的日志级别
+    org.hibernate: info # Hibernate 运行日志级别
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+    com.jinlei: debug
+
+info:
+  company.name: my_company_name
+  company.addr: jiaxing
+  company.tel: 12345678
+  app.name: my_app_name
+  app.desc: mic_server_cloud
+  author: jinlei
